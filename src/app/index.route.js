@@ -6,13 +6,23 @@
     .config(routerConfig);
 
   /** @ngInject */
-  function routerConfig($stateProvider, $urlRouterProvider) {
+  function routerConfig($stateProvider, $urlRouterProvider, $locationProvider) {
+    // $logProvider.debugEnabled(true);
+
     $stateProvider
       .state('home', {
         url: '/',
         templateUrl: 'app/main/main.html'
+      })
+      .state('/reference',{
+        url: '/reference',
+        templateUrl:'app/pages/reference.html',
       });
-    $urlRouterProvider.otherwise('/');
+     $urlRouterProvider.otherwise('/')
+     $locationProvider.html5Mode({
+          enabled : true,
+          requireBase : false
+      })
   }
 
 })();
