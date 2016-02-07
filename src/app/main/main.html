@@ -1,0 +1,20 @@
+<div class="container">
+
+  <!-- <acme-navbar creation-date="main.creationDate"></acme-navbar> -->
+
+  <div id="page-wrapper">
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header">Панель прибора</h1>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-7">
+            <ng-include src="'app/components/device/device.html'"></ng-include>
+          </div>
+          <div class="col-lg-5">
+              <ng-include src="'app/components/infoDevice/infoDevice.html'"></ng-include>
+              <ng-include src="'app/components/infoFeatureDevice/infoFeatureDevice.html'"></ng-include>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="panel panel-default" ng-controller="InfoFeatureController as infoFeature">
+    <div class="panel-heading">
+        <i class="fa fa-info fa-fw"></i>{{infoFeature.title}}
+    </div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="feature in infoFeature.features">
+          {{feature.name}}<i class="pull-right text-muted small" ng-bind-html="infoFeature.testHTML"></i>
+        </li>
+      </ul>
+    </div>
+</div>
